@@ -9,7 +9,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           x: 'Genero',
           y: 'Mision_hs',
           fill: 'Nacionalidad',
-          sort: 'Mision_hsc',
+          sort: 'Genero',
           
         }),
       ],
