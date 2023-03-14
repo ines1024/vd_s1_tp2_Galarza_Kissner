@@ -6,10 +6,10 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     let chart = Plot.plot({
       marks: [
         Plot.barY(data, {
-          x: 'Genero',
-          y: 'Mision_hs',
-          fill: 'Nacionalidad',
-          sort: 'Genero',
+          x: 'genero',
+          y: 'mision_hs',
+          fill: 'nacionalidad',
+          sort: 'genero',
           
         }),
       ],
