@@ -2,14 +2,30 @@
 d3.csv("astronautas.csv", d3.autoType).then((data) => {
   console.log(data)
   let chart = Plot.plot({
-    marks: [Plot.dot(data, { x: "edad_mision", y: "mision_hs" })],
+    marks: [
+      Plot.frame(),
+      Plot.dot(data, { 
+      x: "anio_mision", 
+      y: "mision_hs",
+      stroke: "genero",
+      fill: "genero",
+      fillOpacity: 0.5,
+      r: 2, 
+    })],
+    width: 700,
+    height: 400,
+    color: {
+      legend: true,
+      scheme: "category10",
+    },
     x: {
+      label: "Año",
       grid: true,
       line: true,
-      zero: true,
       nice: true,
     },
     y: {
+      label: "Horas de misión",
       nice: true,
       line: true,
       grid: true,
