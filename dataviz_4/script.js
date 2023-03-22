@@ -49,7 +49,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       color: 'black',
       padding: '11px',
     },
-
+    
     options: {
       plugins: { 
         title: { 
