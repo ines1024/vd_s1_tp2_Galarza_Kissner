@@ -6,7 +6,6 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
     x: {
       grid: true,
       line: true,
-      zero: true,
       nice: true,
     },
     y: {
@@ -17,3 +16,14 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
   });
   d3.select("#chart").append(() => chart);
 });
+
+
+
+/*
+grafico de torta 
+por pais, cada pais cuantos de cada ocupacion
+
+
+
+
+*/

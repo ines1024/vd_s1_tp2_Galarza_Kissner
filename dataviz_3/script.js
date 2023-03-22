@@ -2,16 +2,18 @@
 
 d3.csv('astronautas.csv', d3.autoType).then(data => {
     console.log(data)
+
+    let mujeres = data.filter(d => d.genero == "femenino")
+    console.log(mujeres)
     
+    let hombres = data.filter(d => d.genero == "masculino")
+    console.log(hombres)
+
     let chart = Plot.plot({
       marks: [
-        Plot.barY(data, {
-          x: 'genero',
-          y: 'mision_hs',
-          fill: 'nacionalidad',
-          sort: 'genero',
-          
-        }),
+        Plot.lineY(mujeres, Plot.binY({y:"sum", filter: null},{x:"anio_mision"})), 
+
+    
       ],
 
       width: 400,
@@ -30,7 +32,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       },
       x: {
         
-        label: 'Género',
+        label: 'Año',
         labelOffset: 40
         
       },

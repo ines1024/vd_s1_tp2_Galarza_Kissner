@@ -36,7 +36,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     x: {
       grid: true,
       label: 'Horas de misión',
-      labelOffset: 35
+      labelOffset: 40,
+      
     },
     color: {
       scheme: 'tableau10',
@@ -65,3 +66,12 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
 })
 
 
+/*
+cambiar 
+ - colores
+ - font
+ - titulo
+ - ordenarlo decrecientemente
+ - resaltar rusia y eeuu, resto paleta distinta
+ - poner centrado horas de mision
+*/
