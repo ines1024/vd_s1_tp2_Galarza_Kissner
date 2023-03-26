@@ -7,15 +7,15 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         x: 'edad_mision',
         y: 'mision_hs',
         fill: 'nacionalidad',
-        fillOpacity: 0.6,
+        fillOpacity: 1,
       
       }),
       Plot.frame(),
     ],
     grid: true,
     nice: true,
-    
-    width: 900,
+  
+    width: 1000,
     height: 300,
     inset: 5,
     
@@ -29,18 +29,18 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       tickFormat: "d",
     },
     x: {
-      label: 'Edad misión',
+      label: 'Edad',
       labelOffset: 35,
       ticks: 3,
       domain: [30,60]
     },
     color: {
-      scheme: 'tableau10',
+      scheme: 'burd',
   
     },
     style: {
       fontFamily: 'sans-serif',
-      fontSize: 10,
+      fontSize: 11,
       background: '#',
       color: 'black',
       padding: '18px',
@@ -49,7 +49,6 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     facet: {
       data: data,
       x: 'nacionalidad',
-  
 
     },
   

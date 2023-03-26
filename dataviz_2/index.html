@@ -5,19 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data viz 2</title>
-    <style>
-      #chart{
-        overflow-y:auto;
-      }
-      #chart svg{
-        max-width: initial;
-      }
-    </style>
+    <link rel="stylesheet" href ="style.css">
+
+
   </head>
   <body>
-    
-
+    <h1>
+      Horas de misión según edad y género
+    </h1>
+    <p id="explicacion">
+      Astronautas que participaron en misiones espaciales
+      desde el 1 de enero de 2010 hasta el 30 de diciembre de 2019.
+    </p>
     <div id="chart"></div>
+    <p id = "fuente">
+      <i>NASA (Estados Unidos), Roscosmos (Rusia). </i>
+    </p>
+    <div id="chart"></div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
