@@ -1,6 +1,7 @@
 
 d3.csv('astronautas.csv', d3.autoType).then(data => {
   let chart = Plot.plot({
+    
     marks: [
       Plot.barX(data, {
         x: 'mision_hs',
@@ -24,7 +25,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   
     inset: 5,
     marginLeft: 160, 
-    marginBottom: 40,
+    marginBottom: 50,
     marginTop: 50,
     zero: true,
 
@@ -41,6 +42,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     },
     color: {
       scheme: 'tableau10',
+      
   
     },
     style: {
