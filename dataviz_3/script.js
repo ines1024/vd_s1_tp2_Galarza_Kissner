@@ -3,29 +3,56 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     console.log(data)
     
     let chart = Plot.plot({
-      x: {
-        label: "Año"
-      },
-      y: {
-        grid: true,
-        label: "Cantidad de astronautas"
-      },
-      color: {
-      
-      },
       marks: [
-        Plot.lineY(mujeres, Plot.binY({y:"sum", filter: null},{x:"anio_mision"})), 
-
-    
+        Plot.line(data,
+          Plot.binX(
+            { y: "sum" }, 
+            { x: "anio_mision", 
+              y: "mision_hs", 
+              filter: (d) => d.genero == 'femenino',
+              strokeWidth: 3 },
+          )
+        ), 
+        Plot.dot(data, 
+          Plot.binX(
+            { y: "sum",
+              }, 
+            { x: "anio_mision", 
+              y: "mision_hs", 
+              fill: 'genero',
+              r: 4,
+              filter: (d) => d.genero == 'femenino',
+            },
+          )
+        ),
+        Plot.line(data,
+          Plot.binX(
+            { y: "sum" }, 
+            { x: "anio_mision", 
+              y: "mision_hs", 
+              filter: (d) => d.genero == 'masculino',
+              strokeWidth: 3 },
+          )
+        ), 
+        Plot.dot(data, 
+          Plot.binX(
+            { y: "sum",
+              }, 
+            { x: "anio_mision", 
+              y: "mision_hs", 
+              fill: 'genero',
+              r: 4,
+              filter: (d) => d.genero == 'masculino',
+            },
+          )
+        ),
       ],
-
-      width: 400,
+      width: 700,
       height: 400,
-      inset: 5,
+      //inset: 5,
       marginLeft: 160, 
       marginBottom: 75,
       marginTop: 30,
-      zero: true,
 
       y: {
         grid: true,
@@ -35,7 +62,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       },
       x: {
         
-        label: 'Género',
+        label: 'Año',
         labelOffset: 40
         
       },
@@ -53,3 +80,24 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     })
     d3.select('#chart').append(() => chart)
     })
+
+    Plot.plot({
+      marks: [
+        Plot.rectY(
+          data,
+          Plot.binX(
+            { y: "count" },
+            {
+              x: "price_in_usd",          
+              fill: "blue",
+              fillOpacity: 0.5,
+              thresholds: 5
+            }
+          )
+        )
+      ],
+      marginLeft: 100,
+      width: 336,
+      height: 300
+    })
+   
