@@ -6,9 +6,9 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       marks: [
         Plot.line(data,
           Plot.binX(
-            { y: "sum" }, 
+            { y: "count" }, 
             { x: "anio_mision", 
-              y: "mision_hs", 
+              y: "femenino", 
               filter: (d) => d.genero == 'femenino',
               stroke: "genero",
               strokeWidth: 3,
@@ -19,10 +19,9 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         ), 
         Plot.dot(data, 
           Plot.binX(
-            { y: "sum",
-              }, 
+            { y: "count"}, 
             { x: "anio_mision", 
-              y: "mision_hs", 
+              y: "femenino", 
               fill: 'genero',
               r: 4,
               filter: (d) => d.genero == 'femenino',
@@ -31,10 +30,9 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         ),
         Plot.line(data,
           Plot.binX(
-            { y: "sum" }, 
+            { y: "count" }, 
             { x: "anio_mision", 
-              thresholds: d3.utcTime,
-              y: "mision_hs", 
+              y: "masculino", 
               filter: (d) => d.genero == 'masculino',
               stroke: "genero",
               strokeWidth: 3,
@@ -44,10 +42,9 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         ), 
         Plot.dot(data, 
           Plot.binX(
-            { y: "sum",
-              }, 
+            { y: "count",}, 
             { x: "anio_mision", 
-              y: "mision_hs", 
+              y: "masculino", 
               fill: 'genero',
               r: 4,
               filter: (d) => d.genero == 'masculino',
@@ -58,6 +55,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       width: 700,
       height: 400,
       inset: 5,
+      insetLeft: 20,
+      insetRight: 20,
       marginLeft: 100, 
       marginBottom: 70,
       marginTop: 30,
@@ -65,9 +64,9 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
 
       y: {
         grid: true,
-        label: 'Horas de misión',
+        label: 'Cantidad de astronautas',
         labelOffset: 75,
-        domain: [0, 110000]
+        domain: [0, 50]
       },
       x: {
         label: 'Año',
@@ -88,25 +87,5 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       },
     })
     d3.select('#chart').append(() => chart)
-    })
-
-    Plot.plot({
-      marks: [
-        Plot.rectY(
-          data,
-          Plot.binX(
-            { y: "count" },
-            {
-              x: "price_in_usd",          
-              fill: "blue",
-              fillOpacity: 0.5,
-              thresholds: 5
-            }
-          )
-        )
-      ],
-      marginLeft: 100,
-      width: 336,
-      height: 300
     })
    
