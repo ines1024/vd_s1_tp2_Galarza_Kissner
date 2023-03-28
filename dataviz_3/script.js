@@ -10,7 +10,11 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
             { x: "anio_mision", 
               y: "mision_hs", 
               filter: (d) => d.genero == 'femenino',
-              strokeWidth: 3 },
+              stroke: "genero",
+              strokeWidth: 3,
+              strokeOpacity: 0.6
+
+            },
           )
         ), 
         Plot.dot(data, 
@@ -29,9 +33,13 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           Plot.binX(
             { y: "sum" }, 
             { x: "anio_mision", 
+              thresholds: d3.utcTime,
               y: "mision_hs", 
               filter: (d) => d.genero == 'masculino',
-              strokeWidth: 3 },
+              stroke: "genero",
+              strokeWidth: 3,
+              strokeOpacity: 0.6, 
+            },
           )
         ), 
         Plot.dot(data, 
@@ -49,25 +57,26 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       ],
       width: 700,
       height: 400,
-      //inset: 5,
-      marginLeft: 160, 
-      marginBottom: 75,
+      inset: 5,
+      marginLeft: 100, 
+      marginBottom: 70,
       marginTop: 30,
+      
 
       y: {
         grid: true,
         label: 'Horas de misión',
-        labelOffset: '100'
-        
+        labelOffset: 75,
+        domain: [0, 110000]
       },
       x: {
-        
         label: 'Año',
-        labelOffset: 40
-        
+        labelOffset: 50,
+        tickFormat: 'd',
       },
       color: {
-        scheme: 'tableau10',
+        scheme: 'prgn',
+        range: [0.12, 0.85]
     
       },
       style: {
