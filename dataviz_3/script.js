@@ -61,6 +61,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           y: 16,
           text: ["Hombres"],
         }),
+      
       ],
       width: 900,
       height: 400,
@@ -79,7 +80,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         domain: [0, 50]
       },
       x: {
-        label: 'Año',
+        label: '',
         labelOffset: 50,
         tickFormat: 'd',
         domain: [2010, 2019.9]

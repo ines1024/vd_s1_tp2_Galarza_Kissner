@@ -21,6 +21,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       }),
       Plot.frame(),
      
+     
     ],
     width: 700,
     height: 370,
