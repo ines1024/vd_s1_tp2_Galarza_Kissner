@@ -22,8 +22,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       Plot.frame(),
      
     ],
-    width: 600,
-    height: 340,
+    width: 650,
+    height: 370,
   
     inset: 5,
     marginLeft: 160, 
@@ -33,7 +33,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
 
     y: {
       //domain: d3.sort(data, (a,b) => d3.descending(a.pop, b.pop)).map(d => d.nacionalidad),
-      label: 'País',
+      label: '',
       labelOffset: 150
     },
     x: {
@@ -54,15 +54,6 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       padding: '11px',
     },
     
-    options: {
-      plugins: { 
-        title: { 
-          display: true,
-          text: "Horas de misión"
-        }
-      }
-    }
-  
   
   })
   d3.select('#chart').append(() => chart)
