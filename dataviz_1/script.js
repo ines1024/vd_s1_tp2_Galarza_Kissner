@@ -12,7 +12,8 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
           { x: 'ocupacion',
             sort: {x: "y", reverse: true},
             fill: 'ocupacion',
-        }
+        },
+        Plot.text(alphabet, {x: "letter", y: "frequency", text: d => (d.frequency * 100).toFixed(1), dy: -5}),
       ),
       ),
       
