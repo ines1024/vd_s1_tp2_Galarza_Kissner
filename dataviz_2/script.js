@@ -29,7 +29,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       tickFormat: "d",
     },
     x: {
-      label: 'Edad',
+      label: '',
       labelOffset: 35,
       ticks: 3,
       domain: [30,60]
