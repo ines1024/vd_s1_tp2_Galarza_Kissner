@@ -11,19 +11,15 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
           { y: 'count'},
           { x: 'ocupacion',
             sort: {x: "y", reverse: true},
-            fill: 'ocupacion',
-        },
-        Plot.text(alphabet, {x: "letter", y: "frequency", text: d => (d.frequency * 100).toFixed(1), dy: -5}),
+            fill: 'ocupacion' },
+        ),
       ),
-      ),
-      
-
     ],
-    width: 850,
+    width: 600,
     height: 440,
   
     inset: 5,
-    marginLeft: 0, 
+    marginLeft: 120, 
     marginBottom: 50,
     marginTop: 10,
     zero: true,
@@ -36,7 +32,7 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
 
     },
     x: {
-      label: '',
+      label: 'Ocupación',
       labelOffset: 40,
       
     },
@@ -46,7 +42,7 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
     },
     style: {
       fontFamily: 'sans-serif',
-      fontSize: 16,
+      fontSize: 12,
       background: '#',
       color: 'black',
       padding: '12px',
