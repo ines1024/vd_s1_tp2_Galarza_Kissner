@@ -28,6 +28,11 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
             },
           )
         ),
+        Plot.text(data, {
+          x: 2019.4,
+          y: 5,
+          text: ["Mujeres"],
+        }),
         Plot.line(data,
           Plot.binX(
             { y: "count" }, 
@@ -51,6 +56,11 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
             },
           )
         ),
+        Plot.text(data, {
+          x: 2019.5,
+          y: 16,
+          text: ["Hombres"],
+        }),
       ],
       width: 900,
       height: 400,
@@ -72,7 +82,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         label: '',
         labelOffset: 50,
         tickFormat: 'd',
-        domain: [2010, 2019]
+        domain: [2010, 2019.9]
       },
       color: {
         scheme: 'prgn',
