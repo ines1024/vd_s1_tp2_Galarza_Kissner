@@ -4,11 +4,11 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     
     let chart = Plot.plot({
       marks: [
-        Plot.line(data,
+        Plot.line (data,
           Plot.binX(
             { y: "count" }, 
             { x: "anio_mision", 
-              y: "femenino", 
+              //y: "femenino", 
               filter: (d) => d.genero == 'femenino',
               stroke: "genero",
               strokeWidth: 3,
@@ -21,7 +21,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           Plot.binX(
             { y: "count"}, 
             { x: "anio_mision", 
-              y: "femenino", 
+              //y: "femenino", 
               fill: 'genero',
               r: 4,
               filter: (d) => d.genero == 'femenino',
@@ -32,7 +32,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           Plot.binX(
             { y: "count" }, 
             { x: "anio_mision", 
-              y: "masculino", 
+              //y: "masculino", 
               filter: (d) => d.genero == 'masculino',
               stroke: "genero",
               strokeWidth: 3,
@@ -44,7 +44,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           Plot.binX(
             { y: "count",}, 
             { x: "anio_mision", 
-              y: "masculino", 
+              //y: "masculino", 
               fill: 'genero',
               r: 4,
               filter: (d) => d.genero == 'masculino',
@@ -52,7 +52,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           )
         ),
       ],
-      width: 700,
+      width: 900,
       height: 400,
       inset: 5,
       insetLeft: 20,
@@ -72,6 +72,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         label: 'Año',
         labelOffset: 50,
         tickFormat: 'd',
+        domain: [2010, 2019]
       },
       color: {
         scheme: 'prgn',
