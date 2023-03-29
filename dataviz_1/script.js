@@ -17,7 +17,7 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
       ),
 
     ],
-    width: 600,
+    width: 850,
     height: 440,
   
     inset: 5,
@@ -34,7 +34,7 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
 
     },
     x: {
-      label: 'Ocupación',
+      label: '',
       labelOffset: 40,
       
     },
@@ -44,7 +44,7 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
     },
     style: {
       fontFamily: 'sans-serif',
-      fontSize: 12,
+      fontSize: 16,
       background: '#',
       color: 'black',
       padding: '12px',
