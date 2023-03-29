@@ -1,41 +1,42 @@
 let chart
 d3.csv('astronautas.csv', d3.autoType).then(data => {
   chart = Plot.plot({
-
+    
     marks: [
-      Plot.dot(data, {
-        x: 'edad_mision',
-        y: 'mision_hs',
-        fill: 'nacionalidad',
-        fillOpacity: 1,
-      
-      }),
-      Plot.frame(),
+      Plot.barX(data, 
+         Plot.groupY(
+          {x:'count'},
+          {y: 'nacionalidad', 
+           fill: 'status',
+           filter: (d => d.nacionalidad == 'EE.UU.' || d.nacionalidad == 'U.S.S.R/Rusia'),
+           
+          },
+          
+        ),
+      ),
     ],
-    grid: true,
-    nice: true,
-  
+   
     width: 1000,
     height: 300,
     inset: 5,
-    
     marginLeft: 40, 
     marginBottom: 40,
     marginTop: 50,
     
     y: {
-      label: 'Horas de misión',
+      label: '',
       labelOffset: '40',
-      tickFormat: "d",
+      
     },
     x: {
       label: '',
       labelOffset: 35,
-      ticks: 3,
-      domain: [30,60]
+      ticks: 0,
+
     },
     color: {
-      scheme: 'burd',
+      scheme: '',
+      legend: true,
   
     },
     style: {
@@ -46,12 +47,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       padding: '18px',
     },
 
-    facet: {
-      data: data,
-      x: 'nacionalidad',
 
-    },
-  
   })
   d3.select('#chart').append(() => chart)
 })

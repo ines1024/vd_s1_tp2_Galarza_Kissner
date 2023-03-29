@@ -15,7 +15,7 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
         ),
       ),
     ],
-    width: 600,
+    width: 680,
     height: 440,
   
     inset: 5,

@@ -61,6 +61,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           y: 16,
           text: ["Hombres"],
         }),
+      
       ],
       width: 900,
       height: 400,

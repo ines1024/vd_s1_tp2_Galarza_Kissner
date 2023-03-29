@@ -41,11 +41,3 @@ p#fuente {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
   }
-  #chart svg {
-    max-width: initial;
-    border-style: solid;
-    border: rgb(36, 36, 123) solid;
-    border-width: 1.5px;
-   
-   
-  }
