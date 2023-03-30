@@ -5,10 +5,8 @@ body{
 
 h1 {
 
-    margin-right: 10px;
-    margin-left: 50px;
     margin-top: 50px;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
     text-align: center;
     color: rgb(0, 0, 0);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,7 +17,7 @@ h2 {
     text-align: center;
     color: rgb(0, 0, 0);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 p#explicacion{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
