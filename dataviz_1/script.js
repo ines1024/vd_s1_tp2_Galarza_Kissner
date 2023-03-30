@@ -2,18 +2,17 @@
 d3.csv("astronautas.csv", d3.autoType).then((data) => {
   console.log(data)
   
-  
   let chart = Plot.plot({
     
     marks: [
-      Plot.barX(data, 
+      Plot.barX(data,
         Plot.groupY(
-          { x: 'count'},
-          { y: 'ocupacion',
-            x: 'count',
-            sort: {y: "x", reverse: true},
-            fill: 'ocupacion' },
+          {x: 'sum'},
+          {y: 'ocupacion', sort: {y: 'x', reverse: true}, fill: (d=> d.ocupacion == "comandante" ? "rebeccapurle" : "lightgray"), 
+           
+          }
         ),
+      
       ),
     ],
     width: 680,
