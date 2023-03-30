@@ -38,7 +38,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     x: {
       grid: true,
       label: 'Horas de misión',
-      labelOffset: 100,
+      labelOffset: 40,
+      insetLeft: 5,
       domain: [0, 230000]
       
     },
