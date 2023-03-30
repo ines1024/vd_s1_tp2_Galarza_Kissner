@@ -1,16 +1,17 @@
 
 d3.csv("astronautas.csv", d3.autoType).then((data) => {
   console.log(data)
-  //console.log(d => d.nacionalidad === "U.S.S.R/Rusia")
+  
   
   let chart = Plot.plot({
     
     marks: [
-      Plot.barY(data, 
-        Plot.groupX(
-          { y: 'count'},
-          { x: 'ocupacion',
-            sort: {x: "y", reverse: true},
+      Plot.barX(data, 
+        Plot.groupY(
+          { x: 'count'},
+          { y: 'ocupacion',
+            x: 'count',
+            sort: {y: "x", reverse: true},
             fill: 'ocupacion' },
         ),
       ),
@@ -19,25 +20,25 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
     height: 440,
   
     inset: 5,
-    marginLeft: 120, 
+    marginLeft: 200, 
     marginBottom: 50,
     marginTop: 10,
     zero: true,
 
     y: {
       label: '',
-      domain: [0,100],
       ticks: false,
       labelOffset: 150
 
     },
     x: {
-      label: 'Ocupación',
+      label: '',
       labelOffset: 40,
+      ticks: 0,
       
     },
     color: {
-      scheme: 'tableau10',
+      scheme: '',
   
     },
     style: {
@@ -45,19 +46,10 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
       fontSize: 12,
       background: '#',
       color: 'black',
-      padding: '12px',
+      padding: '14px',
     },
     
   })
     d3.select("#chart").append(() => chart);
 });
 
-
-/*
-grafico de torta 
-de rusia, cada pais cuantos de cada ocupacion
-
-
-
-
-*/

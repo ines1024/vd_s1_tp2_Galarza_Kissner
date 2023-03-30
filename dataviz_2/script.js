@@ -3,15 +3,14 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   chart = Plot.plot({
     
     marks: [
-      Plot.barX(data, 
-         Plot.groupY(
+      Plot.barY(data, 
+        Plot.groupX(
           {x:'count'},
-          {y: 'nacionalidad', 
+          {y: 'nacionalidad',
+           x: x, 
            fill: 'status',
-           filter: (d => d.nacionalidad == 'EE.UU.' || d.nacionalidad == 'U.S.S.R/Rusia'),
-           
-          },
-          
+           filter: (d => d.nacionalidad == 'EE.UU.'), // || d.nacionalidad == 'U.S.S.R/Rusia',
+          },  
         ),
       ),
     ],
@@ -35,7 +34,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
 
     },
     color: {
-      scheme: '',
+      scheme: 'tableau10',
       legend: true,
   
     },

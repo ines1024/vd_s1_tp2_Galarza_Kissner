@@ -10,15 +10,13 @@ h1 {
     margin-bottom: 0px;
     text-align: left;
     color: rgb(0, 0, 0);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        /*font-style: bolder;*/
-    font-weight: 900;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   
 
 }
 p#explicacion {
 
-    font-family:'Helvetica', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align:left;
     margin-left: 50px;
     margin-right: 120px ;
@@ -26,7 +24,7 @@ p#explicacion {
 }
 p#fuente {
   
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
     margin-left: 50px;
     font-size: small;

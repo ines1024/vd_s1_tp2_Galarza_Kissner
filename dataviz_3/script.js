@@ -7,27 +7,17 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         Plot.line (data,
           Plot.binX(
             { y: "count" }, 
-            { x: "anio_mision", 
-              //y: "femenino", 
+            { x: "anio_mision",  
               filter: (d) => d.genero == 'femenino',
+              filter: (d => d.anio_mision != '2010'),
               stroke: "genero",
               strokeWidth: 3,
-              strokeOpacity: 0.6
-
+              strokeOpacity: 0.3,
+              marker: "circle",
+              r: 3,
             },
           )
         ), 
-        Plot.dot(data, 
-          Plot.binX(
-            { y: "count"}, 
-            { x: "anio_mision", 
-              //y: "femenino", 
-              fill: 'genero',
-              r: 4,
-              filter: (d) => d.genero == 'femenino',
-            },
-          )
-        ),
         Plot.text(data, {
           x: 2019.4,
           y: 5,
@@ -36,32 +26,22 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         Plot.line(data,
           Plot.binX(
             { y: "count" }, 
-            { x: "anio_mision", 
-              //y: "masculino", 
+            { x: "anio_mision",  
               filter: (d) => d.genero == 'masculino',
+              filter: (d => d.anio_mision != '2010'),
               stroke: "genero",
               strokeWidth: 3,
-              strokeOpacity: 0.6, 
+              strokeOpacity: 0.3, 
+              marker: "circle",
+              r: 3, 
             },
           )
         ), 
-        Plot.dot(data, 
-          Plot.binX(
-            { y: "count",}, 
-            { x: "anio_mision", 
-              //y: "masculino", 
-              fill: 'genero',
-              r: 4,
-              filter: (d) => d.genero == 'masculino',
-            },
-          )
-        ),
         Plot.text(data, {
           x: 2019.5,
           y: 16,
           text: ["Hombres"],
         }),
-      
       ],
       width: 900,
       height: 400,
@@ -77,13 +57,13 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         grid: true,
         label: 'Cantidad de astronautas',
         labelOffset: 75,
-        domain: [0, 50]
+        domain: [0, 30]
       },
       x: {
-        label: '',
+        label: 'Año',
         labelOffset: 50,
         tickFormat: 'd',
-        domain: [2010, 2019.9]
+        domain: [2011, 2019.9]
       },
       color: {
         scheme: 'prgn',
@@ -92,7 +72,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       },
       style: {
         fontFamily: 'sans-serif',
-        fontSize: 12,
+        fontSize: 14,
         background: '#',
         color: 'black',
         padding: '16px',
@@ -100,4 +80,16 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     })
     d3.select('#chart').append(() => chart)
     })
-   
+
+
+    // Plot.dot(data, 
+        //   Plot.binX(
+        //     { y: "count",}, 
+        //     { x: "anio_mision",  
+        //       fill: 'genero',
+        //       r: 4,
+        //       filter: (d) => d.genero == 'masculino',
+        //       filter: (d => d.anio_mision != '2010')
+        //     },
+        //   )
+        // ),

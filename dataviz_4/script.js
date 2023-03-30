@@ -8,8 +8,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         { x: 'sum'},
         { y: 'nacionalidad',
           x: 'mision_hs',
-          fill: 'nacionalidad',
-          sort: {y: "x", reverse: true}
+          sort: {y: "x", reverse: true},
+          fill: d => (d.nacionalidad == 'EE.UU.' ? 'royalblue' : 'lightgrey' && d.nacionalidad == 'U.S.S.R/Rusia' ? 'firebrick': 'lightgrey'),
         })
       ),
       Plot.text(data, {
@@ -19,13 +19,12 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         fontSize: 14,
         dy: -20,
       }),
-      Plot.frame(),
+      
      
      
     ],
     width: 700,
     height: 370,
-  
     inset: 5,
     marginLeft: 160, 
     marginBottom: 50,
@@ -33,14 +32,13 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     zero: true,
 
     y: {
-      //domain: d3.sort(data, (a,b) => d3.descending(a.pop, b.pop)).map(d => d.nacionalidad),
       label: '',
-      labelOffset: 150
+      labelOffset: 150,
     },
     x: {
       grid: true,
       label: 'Horas de misión',
-      labelOffset: 40,
+      labelOffset: 100,
       domain: [0, 230000]
       
     },
