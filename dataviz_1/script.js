@@ -25,7 +25,7 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
         { x: 'ocupacion', 
          sort: {x: 'y', reverse: true}, 
          fill: d => (d.ocupacion == "Ingeniero aeroespacial" ? "rebeccapurple" : "lightgray"), 
-         text: d => (d.anio_mision).toFixed(0), 
+         text: d => ('sum').toFixed(0), 
          dy: -7,
          textAnchor: "start",
          fontWeight: 'bold',
