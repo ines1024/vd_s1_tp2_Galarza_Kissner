@@ -52,17 +52,13 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
     x: {
       label: '',
       labelOffset: 50,
-      ticks: 0,
-      
-    },
-    color: {
-      scheme: '',
-  
+      ticks: 0,  
     },
     style: {
       fontFamily: 'sans-serif',
       fontSize: 12,
-      background: '#',
+      
+      background: 'black',
       color: 'black',
       padding: '18px',
     },
