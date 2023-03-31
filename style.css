@@ -7,21 +7,20 @@ body{
 h1 {
 
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     text-align: center;
-    color: rgb(239, 231, 231);
+    color: rgb(251, 251, 251);
     font-family:andale mono, monospace;
-
-    font-weight: 1000;
-    font-size: xx-large;
-   
+    font-size: 45px;
+    
 }
 h2 {
 
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: rgb(208, 194, 225);
     font-family:andale mono, monospace;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    font-size: 28px;
 }
 p#explicacion{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,7 +29,7 @@ p#explicacion{
     text-align: left;
     font-size: large;
     margin-bottom: 20px;
-    margin-top: 80px;
+  
     color:rgb(255, 255, 255)
 }
 
@@ -39,14 +38,16 @@ div#botones ul{
     text-align: center;
     margin-left: 60px;
     margin-right: 75px;
-    margin-top: 60px;
+    margin-top: 45px;
 }
 
 div#botones ul li{
     display: inline-block;
-    background-color: rgb(80, 80, 168);
+    background-color: rgb(162, 142, 186);
+    border-radius: 30px;
     width: 250px;
     height: 150px;
+
   
 }
 
@@ -54,16 +55,23 @@ div#botones ul li a{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
     text-align: center;
-    font-size: large;
+    font-size: 18px;
+    font-weight: 150px;
     display: block;
 
-    color: rgb(255, 255, 255);
+    color: rgb(239, 239, 239);
     margin-top: 2px;
     margin-bottom: 4px;
     padding:30px;
 }
 
 div#botones ul li a:hover{
-   background-color: rgb(178, 178, 212);
+   background-color: rgb(162, 142, 186);
+    color: rgb(101, 88, 117);
+   border-radius: 30px;
+ 
+
 }
+
+
 
