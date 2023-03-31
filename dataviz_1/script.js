@@ -18,20 +18,19 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
           }
         ),
       ),
-      Plot.text(data, 
-        Plot.groupX(
-        {y: 'sum',
-         text: "first"},
-        { x: 'ocupacion', 
-         sort: {x: 'y', reverse: true}, 
-         fill: d => (d.ocupacion == "Ingeniero aeroespacial" ? "rebeccapurple" : "lightgray"), 
-         text: d => ('sum').toFixed(0), 
-         dy: -7,
-         textAnchor: "start",
-         fontWeight: 'bold',
-         fontSize: "18px",}
-      ),
-      ),
+      // Plot.text(data, 
+      //   Plot.groupX(
+      //   {y: 'sum',
+      //    text: "first"},
+      //   { x: 'ocupacion', 
+      //    sort: {x: 'y', reverse: true}, 
+      //    fill: d => (d.ocupacion == "Ingeniero aeroespacial" ? "rebeccapurple" : "lightgray"),  
+      //    dy: -7,
+      //    textAnchor: "start",
+      //    fontWeight: 'bold',
+      //    fontSize: "18px",}
+      // ),
+      // ),
       
     ],
     width: 850,
