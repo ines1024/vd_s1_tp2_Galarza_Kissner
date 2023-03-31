@@ -1,35 +1,69 @@
 
 body{
-    background-color: rgb(33, 38, 101);
+    background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80');
+    
 }
 
 h1 {
 
     margin-top: 50px;
-    margin-bottom: 1px;
+    margin-bottom: 50px;
     text-align: center;
-    color: rgb(255, 255, 255);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(239, 231, 231);
+    font-family:andale mono, monospace;
+
+    font-weight: 1000;
+    font-size: xx-large;
    
 }
 h2 {
 
     text-align: center;
     color: rgb(255, 255, 255);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:andale mono, monospace;
     margin-bottom: 20px;
 }
 p#explicacion{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 110px;
+    margin-right: 75px;
+    text-align: left;
+    font-size: large;
+    margin-bottom: 20px;
+    margin-top: 80px;
     color:rgb(255, 255, 255)
 }
 
-div#links{
-    
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
-    margin-left: 40px;
+div#botones ul{
+    list-style: none;
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 75px;
+    margin-top: 60px;
+}
+
+div#botones ul li{
+    display: inline-block;
+    background-color: rgb(80, 80, 168);
+    width: 250px;
+    height: 150px;
   
 }
+
+div#botones ul li a{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: large;
+    display: block;
+
+    color: rgb(255, 255, 255);
+    margin-top: 2px;
+    margin-bottom: 4px;
+    padding:30px;
+}
+
+div#botones ul li a:hover{
+   background-color: rgb(178, 178, 212);
+}
+
