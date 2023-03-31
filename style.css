@@ -23,7 +23,7 @@ h2 {
     font-size: 28px;
 }
 p#explicacion{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:andale mono, monospace;
     margin-left: 110px;
     margin-right: 75px;
     text-align: left;
@@ -36,41 +36,50 @@ p#explicacion{
 div#botones ul{
     list-style: none;
     text-align: center;
-    margin-left: 60px;
-    margin-right: 75px;
-    margin-top: 45px;
 }
 
 div#botones ul li{
     display: inline-block;
-    background-color: rgb(162, 142, 186);
+    background-color: rgb(84, 38, 140);
     border-radius: 30px;
-    width: 250px;
+    width: 200px;
     height: 150px;
+    margin-left: 50px;
+    text-align: center;
 
-  
 }
 
 div#botones ul li a{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:andale mono, monospace;
     text-decoration: none;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 150px;
     display: block;
-
     color: rgb(239, 239, 239);
-    margin-top: 2px;
-    margin-bottom: 4px;
-    padding:30px;
+    padding: 35px;
 }
+div#botones ul li#v1{
+  margin-top: 50px;
+} 
+
+div#botones ul li#v2{
+    margin-top: 50px;
+  } 
+
+  div#botones ul li#v3{
+    margin-top: 50px;
+  } 
+
+  div#botones ul li#v4{
+    margin-top: 50px;
+  } 
 
 div#botones ul li a:hover{
-   background-color: rgb(162, 142, 186);
-    color: rgb(101, 88, 117);
+   background-color: rgb(84, 38, 140);
+   color: rgb(103, 94, 113);
    border-radius: 30px;
  
-
 }
 
 
