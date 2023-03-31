@@ -5,18 +5,37 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
   let chart = Plot.plot({
     
     marks: [
-      Plot.barX(data,
-        Plot.groupY(
-          {x: 'sum'},
-          {y: 'ocupacion', sort: {y: 'x', reverse: true}, fill: (d=> d.ocupacion == "comandante" ? "rebeccapurle" : "lightgray"), 
-           
+      Plot.barY(data,
+        Plot.groupX(
+          {y: 'sum',
+           text: "first" },
+          {x: 'ocupacion', 
+           sort: {x: 'y', reverse: true}, 
+           fill: d => (d.ocupacion == "Ingeniero aeroespacial" ? "rebeccapurple" : "lightgray"), 
+           //x: "value",
+           text: "ocupacion",
+           textAnchor: "start",
           }
         ),
-      
       ),
+      Plot.text(data, 
+        Plot.groupX(
+        {y: 'sum',
+         text: "first"},
+        { x: 'ocupacion', 
+         sort: {x: 'y', reverse: true}, 
+         fill: d => (d.ocupacion == "Ingeniero aeroespacial" ? "rebeccapurple" : "lightgray"), 
+         text: d => (d.anio_mision).toFixed(0), 
+         dy: -7,
+         textAnchor: "start",
+         fontWeight: 'bold',
+         fontSize: "18px",}
+      ),
+      ),
+      
     ],
-    width: 680,
-    height: 440,
+    width: 850,
+    height: 500,
   
     inset: 5,
     marginLeft: 200, 
@@ -27,12 +46,13 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
     y: {
       label: '',
       ticks: false,
-      labelOffset: 150
+      labelOffset: 150,
+      ticks: 7,
 
     },
     x: {
       label: '',
-      labelOffset: 40,
+      labelOffset: 50,
       ticks: 0,
       
     },
@@ -45,7 +65,7 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
       fontSize: 12,
       background: '#',
       color: 'black',
-      padding: '14px',
+      padding: '18px',
     },
     
   })
