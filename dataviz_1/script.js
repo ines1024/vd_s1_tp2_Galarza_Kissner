@@ -1,52 +1,54 @@
 
 d3.csv("astronautas.csv", d3.autoType).then((data) => {
+
   console.log(data)
+
+  let ocupaciones = d3.groups(data, d => d.ocupacion)
+      .map(d => {
+        return {
+        ocupacion: d[0],
+        sum: d[1].length,
+        }
+      })
+  //console.log(ocupaciones)
   
   let chart = Plot.plot({
     
     marks: [
-      Plot.barY(data,
-        Plot.groupX(
-          {y: 'sum',
-           text: "first" },
-          {x: 'ocupacion', 
-           sort: {x: 'y', reverse: true}, 
-           fill: d => (d.ocupacion == "Ingeniero aeroespacial" ? "rebeccapurple" : "lightgray"), 
-           //x: "value",
-           text: "ocupacion",
-           textAnchor: "start",
-          }
-        ),
+      Plot.barY(ocupaciones,
+        {x: 'ocupacion',
+         y: 'sum',
+         sort: {x: 'y', reverse: true},
+         fill: d => d.ocupacion == "Ingeniero aeroespacial" ? "rebeccapurple" : "lightgrey",
+        }
       ),
-      // Plot.text(data, 
-      //   Plot.groupX(
-      //   {y: 'sum',
-      //    text: "first"},
-      //   { x: 'ocupacion', 
-      //    sort: {x: 'y', reverse: true}, 
-      //    fill: d => (d.ocupacion == "Ingeniero aeroespacial" ? "rebeccapurple" : "lightgray"),  
-      //    dy: -7,
-      //    textAnchor: "start",
-      //    fontWeight: 'bold',
-      //    fontSize: "18px",}
-      // ),
-      // ),
+      Plot.text(ocupaciones,
+        { x: 'ocupacion',
+          y: 'sum',
+          text: 'sum',
+          textAnchor: 'top',
+          fontWeight: 'Bold' ,
+          fontSize: '18px', 
+          fill: d => (d.ocupacion == "Ingeniero aeroespacial" ? "rebeccapurple" : "grey"),
+          dy: -9
+        }
+      ),
       
     ],
     width: 850,
     height: 500,
-  
     inset: 5,
-    marginLeft: 200, 
-    marginBottom: 50,
-    marginTop: 10,
+    marginLeft: 100, 
+    marginBottom: 20,
+    marginRight: 100,
+    marginTop: 30,
     zero: true,
 
     y: {
       label: '',
       ticks: false,
       labelOffset: 150,
-      ticks: 7,
+      ticks: 0,
 
     },
     x: {
@@ -55,10 +57,7 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
       ticks: 0,
       
     },
-    color: {
-      scheme: '',
-  
-    },
+
     style: {
       fontFamily: 'sans-serif',
       fontSize: 12,
