@@ -56,10 +56,9 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
     },
     style: {
       fontFamily: 'sans-serif',
-      fontSize: 12,
-      
-      background: 'black',
-      color: 'black',
+      fontSize: 14,
+      background: "black",
+      color: 'white',
       padding: '18px',
     },
     

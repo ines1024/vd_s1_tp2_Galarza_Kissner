@@ -13,7 +13,7 @@ h1 {
     margin-bottom: 0px;
     text-align: left;
     color: rgb(255, 255, 255);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
 
 }
@@ -40,6 +40,7 @@ p#fuente {
     margin-top: 30px;
     margin-bottom: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 
   }
  
