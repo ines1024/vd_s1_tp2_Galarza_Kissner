@@ -1,41 +1,47 @@
 
+body{
 
+    background-color: black;
+}
 
 h1 {
 
-    
     margin-right: 10px;
-    margin-left: 50px;
+    margin-left: 90px;
     margin-top: 50px;
     margin-bottom: 0px;
     text-align: left;
-    color: rgb(0, 0, 0);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
 
 }
 p#explicacion {
 
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align:left;
     margin-left: 50px;
     margin-right: 120px ;
     margin-top: 40px;
+    color: aliceblue;
 }
 p#fuente {
   
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: italic;
-    margin-left: 50px;
+    margin-left: 110px;
     font-size: small;
     margin-bottom: 50px;
     margin-top: 1px;
+    color: aliceblue;
 }
 #chart {
     overflow-y: auto;
-    margin-left: 50px;
+    margin-left: 18px;
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
+
   }
+ 

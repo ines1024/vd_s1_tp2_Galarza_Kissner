@@ -33,16 +33,18 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
 
     },
     color: {
-      scheme: 'tableau10',
+      scheme: 'piyg',
       legend: true,
+      
   
     },
     style: {
       fontFamily: 'sans-serif',
       fontSize: 11,
-      background: '#',
-      color: 'black',
+      background: 'black',
+      color: 'white',
       padding: '18px',
+      legend: true,
     },
 
 

@@ -49,18 +49,18 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       insetLeft: 20,
       insetRight: 20,
       marginLeft: 100, 
-      marginBottom: 70,
+      marginBottom: 50,
       marginTop: 30,
       
 
       y: {
         grid: true,
-        label: 'Cantidad de astronautas',
+        label: '',
         labelOffset: 75,
         domain: [0, 30]
       },
       x: {
-        label: 'Año',
+        label: '',
         labelOffset: 50,
         tickFormat: 'd',
         domain: [2011, 2019.9]
@@ -72,9 +72,9 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       },
       style: {
         fontFamily: 'sans-serif',
-        fontSize: 14,
-        background: '#',
-        color: 'black',
+        fontSize: 16,
+        background: 'black',
+        color: 'white',
         padding: '16px',
       },
     })
