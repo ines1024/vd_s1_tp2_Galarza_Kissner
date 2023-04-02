@@ -36,26 +36,25 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
       ),
       
     ],
-    width: 900,
-    height: 400,
-    inset: 10,
-    marginLeft: 300, 
-    marginBottom: 50,
-    marginRight: 150,
-    marginTop: 50,
+    width: 550,
+    height: 450,
+  
+    marginLeft: 80, 
+    marginBottom: 30,
+    marginTop: 10,
     zero: true,
 
     y: {
       label: '',
-      labelOffset: 150,
-      ticks: 0,
+      ticks: 7,
 
     },
     x: {
       label: '',
-      labelOffset: 50,
-      ticks: 0,
-      
+      labelOffset: 150,
+      ticks: false,  
+      marginBottom: 100,
+     
     },
 
     style: {
