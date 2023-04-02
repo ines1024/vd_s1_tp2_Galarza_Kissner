@@ -44,4 +44,29 @@ p#fuente {
 
 
   }
+  ul li a{
+  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: aliceblue;
+    text-decoration: none;
+    font-size: small;
+   
+ }
+
+ ul li{
+    background-color: rgb(84, 38, 140);
+    
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 1070px;
+    
+    width: 80px;
+    height: 20px;
+ }
+ul li a#inicio:hover{
+    background-color: rgb(84, 38, 140);
+    color: rgb(103, 94, 113);
+
+ }
  

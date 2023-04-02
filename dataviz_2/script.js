@@ -12,12 +12,13 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           },  
         ),
       ),
+    
     ],
    
     width: 1000,
-    height: 300,
-    inset: 5,
-    marginLeft: 40, 
+    height: 250,
+    
+    marginLeft: 80, 
     marginBottom: 40,
     marginTop: 50,
     
@@ -34,13 +35,12 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     },
     color: {
       scheme: 'piyg',
-      legend: true,
       
   
     },
     style: {
       fontFamily: 'sans-serif',
-      fontSize: 11,
+      fontSize: 16,
       background: 'black',
       color: 'white',
       padding: '18px',
