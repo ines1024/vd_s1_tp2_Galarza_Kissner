@@ -38,8 +38,8 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
     ],
     width: 850,
     height: 400,
-  
-    marginLeft: 250, 
+    marginLeft: 200, 
+    marginRight: 200,
     marginBottom: 30,
     marginTop: 10,
     zero: true,
