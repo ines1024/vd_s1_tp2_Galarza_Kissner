@@ -9,7 +9,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         { y: 'nacionalidad',
           x: 'mision_hs',
           sort: {y: "x", reverse: true},
-          fill: d => (d.nacionalidad == 'EE.UU.' ? 'royalblue' : 'lightgrey' && d.nacionalidad == 'U.S.S.R/Rusia' ? 'firebrick': 'lightgrey'),
+          fill: d => (d.nacionalidad == 'EE.UU.' ? 'royalblue' : '#848484' && d.nacionalidad == 'U.S.S.R/Rusia' ? 'firebrick': '#848484'),
         })
       ),
       Plot.text(data, {

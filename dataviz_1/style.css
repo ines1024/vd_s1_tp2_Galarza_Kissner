@@ -13,13 +13,13 @@ h1 {
     margin-bottom: 0px;
     text-align: center;
     color: rgb(255, 255, 255);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: andale mono, monospace;
   
 
 }
 p#explicacion {
 
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: andale mono, monospace;
     text-align:left;
     margin-left: 50px;
     margin-right: 120px ;
@@ -36,15 +36,15 @@ p#fuente {
 }
 #chart {
     overflow-y: auto;
-    margin-left: 5px;
+    margin-left: 400px;
     margin-top: 30px;
     margin-bottom: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family:andale mono, monospace;
 
   }
   ul li a{
   
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: andale mono, monospace, sans-serif;
     text-align: center;
     color: aliceblue;
     text-decoration: none;

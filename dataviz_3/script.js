@@ -11,7 +11,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
               filter: (d) => d.genero == 'femenino',
               filter: (d => d.anio_mision != '2010'),
               stroke: "genero",
-              strokeWidth: 3,
+              strokeWidth: 4.5,
               strokeOpacity: 0.3,
               marker: "circle",
               r: 3,
@@ -19,7 +19,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           )
         ), 
         Plot.text(data, {
-          x: 2019.4,
+          x: 2019.55,
           y: 5,
           text: ["Mujeres"],
         }),
@@ -29,25 +29,26 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
             { x: "anio_mision",  
               filter: (d) => d.genero == 'masculino',
               filter: (d => d.anio_mision != '2010'),
-              stroke: "genero",
-              strokeWidth: 3,
-              strokeOpacity: 0.3, 
               marker: "circle",
+              stroke: "genero",
+              strokeWidth: 4.5,
+              strokeOpacity: 0.3, 
               r: 3, 
             },
           )
         ), 
         Plot.text(data, {
-          x: 2019.5,
+          x: 2019.6,
           y: 16,
           text: ["Hombres"],
         }),
       ],
+      
       width: 900,
       height: 400,
       inset: 5,
-      insetLeft: 20,
-      insetRight: 20,
+      insetLeft: 30,
+      insetRight: 30,
       marginLeft: 100, 
       marginBottom: 50,
       marginTop: 30,
@@ -59,17 +60,19 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         labelOffset: 75,
         domain: [0, 30]
       },
+
       x: {
         label: '',
         labelOffset: 50,
         tickFormat: 'd',
         domain: [2011, 2019.9]
       },
+
       color: {
         scheme: 'prgn',
-        range: [0.12, 0.85]
-    
+        range: [0.2, 0.85]
       },
+
       style: {
         fontFamily: 'sans-serif',
         fontSize: 16,
