@@ -61,7 +61,7 @@ p#autores {
  }
 
  ul li{
-    background-color: #854a95;
+    background-color: #733e81;
     
     border-radius: 20px;
     text-align: center;
@@ -71,7 +71,7 @@ p#autores {
     height: 20px;
  }
 ul li a#inicio:hover{
-    background-color: #854a95;
+    background-color: #733e81;
     color: rgb(0, 0, 0);
 
  }

@@ -7,7 +7,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         Plot.groupX(
           {y:'count'},
           {x: 'anio_mision',
-           fill: 'status',
+           fill: 'status'
           },  
         ),
       ),
