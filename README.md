@@ -6,13 +6,13 @@ Visualizacion: gráfico de barras horizontales.
 Marca: Línea, para representar cada profesión.
 Canal 1: largo de las barras para representar la cantidad de astronautas por profesión.
 Canal 2: Color, para destacar la profesión más común.
-Agrupamos los datos en profesión para destacar y mostrar que la ingeniería es la profesión más común entre los astronautas.
+Agrupamos los datos en profesión para destacar y mostrar que la ingeniería aeroespacial es la profesión más común entre los astronautas.
 
 Visualización 2
 Visualización: gráfico de barras verticales.
 Marca: Línea, para representar cada año.
-Canal 1: largo de las barras para cuantificar los astronautas totales.
-Canal 2: Color, para representar los astronautas civiles y militares.
+Canal 1: largo de las barras para cuantificar los astronautas totales por año.
+Canal 2: Color, para deferenciar los astronautas civiles de los militares.
 Decidimos agrupar los datos en militar y civil porque nos resultó interesante que la cantidad de astronautas militares sea mayor que la de civiles.
 
 Visualización 3
