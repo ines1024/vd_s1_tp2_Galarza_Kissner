@@ -7,7 +7,6 @@ body{
 h1 {
 
     margin-top: 50px;
-    margin-bottom: 0px;
     text-align: center;
     color: rgb(255, 255, 255);
     font-family: andale mono, monospace;
@@ -72,8 +71,8 @@ p#autores {
     height: 20px;
  }
 ul li a#inicio:hover{
-    background-color: rgb(84, 38, 140);
-    color: rgb(103, 94, 113);
+    background-color: #854a95;
+    color: rgb(0, 0, 0);
 
  }
  

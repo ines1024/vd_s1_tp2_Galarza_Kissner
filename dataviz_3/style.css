@@ -6,43 +6,49 @@ body{
 
 h1 {
 
-    margin-right: 10px;
-    margin-left: 90px;
     margin-top: 50px;
-    margin-bottom: 0px;
-    text-align: left;
+    margin-bottom: 20px;
+    text-align: center;
     color: rgb(255, 255, 255);
     font-family:andale mono, monospace;
-  
 
 }
 p#explicacion {
 
     font-family: andale mono, monospace;
     text-align: center;
-    margin-left: 50px;
-    margin-right: 120px ;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-top: 40px;
     color: aliceblue;
 }
 p#fuente {
   
-    font-family: andale mono, monospace;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
-    margin-left: 110px;
+    text-align: match-parent;
+    margin-left: 15%;
     font-size: small;
     margin-bottom: 50px;
     margin-top: 1px;
     color: aliceblue;
 }
+p#autores { 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: white;
+    margin-left: 15%;
+    text-align: inherit;
+    font-size: small;
+    margin-bottom: 50px;
+}
 #chart {
     overflow-y: auto;
-    margin-left: 18px;
-    margin-top: 30px;
-    margin-bottom: 1px;
-    font-family: andale mono, monospace;
-
-
+    align-items: 'center';
+    margin-left: 25%;
+    margin-right: 20%;
+    margin-top: 40px;
+    margin-bottom: 10px;
   }
   ul li a{
   

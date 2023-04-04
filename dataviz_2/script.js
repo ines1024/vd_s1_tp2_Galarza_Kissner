@@ -24,28 +24,28 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       label: 'Cantidad de astronautas',
       labelOffset: 40,
       ticks: 5,
-      
+      grid: true,
+      insetLeft: 10, 
+      inset: 7
     },
     x: {
       label: '',
       labelOffset: 35,
       tickFormat: 'd',
-
+      inset: 7
     },
     
     color: {
       range: [ "#7a65a7", "#b3dc83"],
-      legend: true,
-      fontSize: '12px', 
     },
 
     style: {
       fontFamily: 'sans-serif',
-      fontSize: 16,
+      fontSize: 18,
       background: 'black',
       padding: '18px',
       color: "white",
-      //legend: true,
+
     },
 
 

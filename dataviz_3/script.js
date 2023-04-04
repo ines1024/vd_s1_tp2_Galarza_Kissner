@@ -19,8 +19,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           )
         ), 
         Plot.text(data, {
-          x: 2019.55,
-          y: 5,
+          x: 2019.65,
+          y: 4.1,
           text: ["Mujeres"],
         }),
         Plot.line(data,
@@ -38,18 +38,16 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           )
         ), 
         Plot.text(data, {
-          x: 2019.6,
-          y: 16,
+          x: 2019.7,
+          y: 15.7,
           text: ["Hombres"],
         }),
       ],
       
-      width: 900,
+      width: 800,
       height: 400,
-      inset: 5,
-      insetLeft: 30,
-      insetRight: 30,
-      marginLeft: 100, 
+      insetLeft: 40,
+      insetRight: 40,
       marginBottom: 50,
       marginTop: 30,
       
@@ -58,14 +56,14 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         grid: true,
         label: '',
         labelOffset: 75,
-        domain: [0, 30]
+        domain: [0, 30],
       },
 
       x: {
         label: '',
         labelOffset: 50,
         tickFormat: 'd',
-        domain: [2011, 2019.9]
+        domain: [2011, 2019.9],
       },
 
       color: {
