@@ -29,7 +29,7 @@ p#explicacion{
     margin-right: 75px;
     text-align: center;
     font-size: large;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-weight: 500;
     color:rgb(255, 255, 255)
     
@@ -38,8 +38,10 @@ p#explicacion{
 div#botones ul{
     list-style: none;
     text-align: center;
-    margin-left: 170px;
-    margin-right: 250px
+    margin: 0 auto;
+    width: 60%;
+    /* margin-left: 170px;
+    margin-right: 250px */
 }
 
 div#botones ul li{
@@ -52,10 +54,10 @@ div#botones ul li{
     /* margin-left: 250px;
     margin-right: 75px;  */
 
-    width: 80%;
+    width: 60%;
     height: 100%;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
 }
 
