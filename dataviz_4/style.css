@@ -17,14 +17,11 @@ h1 {
 p#explicacion {
 
     font-family: andale mono, monospace;
-    text-align: center;
-    margin: 0 auto;
-    justify-content: center; 
-    margin-left: 10%;
-    margin-right: 10%;
     font-size: 17px;
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-top: 40px;
-    margin-bottom: 30px;
     color: aliceblue;
 }
 p#fuente {
@@ -66,7 +63,7 @@ p#autores {
     background-color: rgb(84, 38, 140, 0.650);
     border-radius: 20px;
     text-align: center;
-    margin-left: 90%;
+    margin-left: 10%;
     width: 80px;
     height: 20px;
  }
