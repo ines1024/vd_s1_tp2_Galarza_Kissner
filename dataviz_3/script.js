@@ -76,7 +76,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         fontSize: 16,
         background: 'black',
         color: 'white',
-        padding: '16px',
+        //padding: '16px',
       },
     })
     d3.select('#chart').append(() => chart)

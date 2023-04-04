@@ -29,7 +29,6 @@ p#fuente {
     text-align: match-parent;
     margin-left: 15%;
     font-size: small;
-    margin-bottom: 50px;
     margin-top: 1px;
     color: aliceblue;
 }
@@ -59,7 +58,7 @@ p#autores {
  }
 
  ul li{
-    background-color: rgb(84, 38, 140);
+    background-color: rgb(118, 67, 182, 0.5);
     
     border-radius: 20px;
     text-align: center;
@@ -69,8 +68,8 @@ p#autores {
     height: 20px;
  }
 ul li a#inicio:hover{
-    background-color: rgb(84, 38, 140);
-    color: rgb(103, 94, 113);
+    background-color: rgb(84, 38, 140, 0.5);
+    color: rgb(0, 0, 0);
 
  }
  

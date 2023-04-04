@@ -28,7 +28,7 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
           text: 'sum',
           textAnchor: 'top',
           fontWeight: 'bold' ,
-          fontSize: '26px', 
+          fontSize: '22px', 
           fill: d => (d.ocupacion == "Ingeniero aeroespacial" ? "#854a95" : "#848484"),
           dy: -1,
           dx: 28
@@ -36,10 +36,12 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
       ),
       
     ],
-    width: 850,
-    height: 400,
+    width: 800,
+    height: 300,
     marginLeft: 250, 
-    marginRight: 200,
+    insetLeft: 7, 
+    insetRight: 8,
+    marginRight: 100,
     marginBottom: 30,
     marginTop: 10,
     zero: true,
@@ -53,17 +55,15 @@ d3.csv("astronautas.csv", d3.autoType).then((data) => {
       label: '',
       labelOffset: 150,
       ticks: false,  
-      marginBottom: 100,
      
     },
 
     style: {
       fontFamily: "Segoe UI",
-      fontSize: 17,
+      fontSize: 14,
       background: "black",
       color: 'white',
-      padding: '14px',
-      fontWeight: 500,
+      fontWeight: 400,
     },
     
   })

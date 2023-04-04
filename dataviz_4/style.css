@@ -28,25 +28,29 @@ p#explicacion {
     color: aliceblue;
 }
 p#fuente {
-  
-    font-family: andale mono, monospace;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
-    margin-left: 185px;
+    margin-left: 15%;
     font-size: small;
-    margin-bottom: 50px;
+    margin-top: 1px;
+    color: aliceblue;
+}
+p#autores {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    text-align: match-parent;
+    margin-left: 15%;
+    font-size: small;
     margin-top: 1px;
     color: aliceblue;
 }
 #chart {
 
     overflow-y: auto;
-    margin: 0 auto;
-    justify-content: center; 
-    align-items: center;
-    margin-bottom: 1px;
-    margin-left: 15%;
-    margin-right: 15%;
-
+    align-items: 'center';
+    margin-left: 25%;
+    margin-right: 20%;
+    margin-bottom: 10px;
 
   }
   ul li a{
@@ -59,7 +63,7 @@ p#fuente {
  }
 
  ul li{
-    background-color: rgb(84, 38, 140);
+    background-color: rgb(84, 38, 140, 0.650);
     border-radius: 20px;
     text-align: center;
     margin-left: 90%;
@@ -68,8 +72,8 @@ p#fuente {
  }
 
 ul li a#inicio:hover{
-    background-color: rgb(84, 38, 140);
-    color: rgb(103, 94, 113);
+    background-color: rgba(84, 38, 140, 0.699);
+    color: rgb(0, 0, 0);
 
  }
  

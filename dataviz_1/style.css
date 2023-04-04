@@ -31,7 +31,7 @@ p#fuente {
     margin-bottom: 0.5px;
     margin-top: 5px;
     text-align: match-parent;
-    margin-left: 15%
+    margin-left: 15%;
 }
 p#autores {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -43,11 +43,12 @@ p#autores {
     margin-left: 15%
 }
 #chart {
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    /* justify-content: center; */
+    align-items: center;
     margin-left: 20%;
     margin-right: 20%;
-    margin-bottom: 10px;
-    font-family:andale mono, monospace;
+    /* margin-bottom: 10px; */
 
   }
   ul li a{
