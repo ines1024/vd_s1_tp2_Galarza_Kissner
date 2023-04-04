@@ -34,27 +34,20 @@ p#explicacion{
     color:rgb(255, 255, 255)
     
 }
-
 div#botones ul{
     list-style: none;
     text-align: center;
     margin: 0 auto;
     width: 60%;
-    /* margin-left: 170px;
-    margin-right: 250px */
 }
 
 div#botones ul li{
   
     background-color: rgba(84, 38, 140, 0.499);
     
-    border-radius: 20px; 
+    border-radius: 30px; 
     text-align: center;
-   
-    /* margin-left: 250px;
-    margin-right: 75px;  */
-
-    width: 60%;
+    width: 65%;
     height: 100%;
     margin: 0 auto;
     justify-content: center; 
@@ -65,7 +58,6 @@ div#botones ul li a{
     font-family:andale mono, monospace;
     text-decoration: none;
     text-align: center;
-
     font-size: 16px;
     font-weight: bold;
     display: block;

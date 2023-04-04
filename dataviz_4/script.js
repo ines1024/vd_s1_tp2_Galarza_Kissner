@@ -23,10 +23,10 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
      
      
     ],
-    width: 700,
-    height: 370,
-    inset: 5,
+    width: 800,
+    height: 400,
     marginLeft: 160, 
+    marginRight: 100,
     marginBottom: 50,
     marginTop: 10,
     zero: true,
@@ -37,16 +37,13 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     },
     x: {
       grid: true,
-      label: '',
+      label: 'Horas misionadas',
       labelOffset: 40,
-      insetLeft: 5,
+      insetLeft: 4,
       domain: [0, 230000]
       
     },
-    color: {
-      scheme: 'tableau10',
   
-    },
     style: {
       fontFamily: 'sans-serif',
       fontSize: 14,
