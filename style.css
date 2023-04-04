@@ -25,10 +25,10 @@ h2 {
 }
 p#explicacion{
     font-family:andale mono, monospace;
-    margin-left: 110px;
-    margin-right: 75px;
     text-align: center;
     font-size: large;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-bottom: 50px;
     font-weight: 500;
     color:rgb(255, 255, 255)
@@ -50,7 +50,6 @@ div#botones ul li{
     width: 65%;
     height: 100%;
     margin: 0 auto;
-    justify-content: center; 
     align-items: center;
 }
 
@@ -63,7 +62,7 @@ div#botones ul li a{
     display: block;
 
     color: rgba(255, 255, 255, 0.868);
-    padding: 12px;
+    padding: 11px;
 
     margin-bottom: 10px;
 }
