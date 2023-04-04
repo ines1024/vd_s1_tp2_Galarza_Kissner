@@ -62,10 +62,7 @@ p#fuente {
     background-color: rgb(84, 38, 140);
     border-radius: 20px;
     text-align: center;
-    text-align: center;
-    margin: 0 auto;
-    justify-content: center; 
-    align-items: center;
+    margin-left: 90%;
     width: 80px;
     height: 20px;
  }
