@@ -28,3 +28,5 @@ Visualización: Gráfico de barra horizontal.
 Marca: Línea, para representar cada país.
 Canal 1: largo de las barras, para cuantificar las horas de misión.
 Canal 2: color, para destacar los valores de Estados Unidos y de Rusia.
+Elegimos destacar Rusia y Estados Unidos porque fueron los países pioneros en el espacio y los que por lo tanto
+más horas de misión tienen. Además, decidimos incluir los valores de los demás países para resaltar la gran diferencia de exploración entre los mismos, y Rusia y Estados Unidos. 
