@@ -52,7 +52,8 @@ p#autores {
   }
   ul li a{
   
-    font-family:andale mono, monospace;
+    font-family: andale mono, monospace;
+    text-align: center;
     color: aliceblue;
     text-decoration: none;
     font-size: small;
@@ -60,17 +61,20 @@ p#autores {
  }
 
  ul li{
-    background-color: rgb(84, 38, 140, 0.650);
+    background-color:#6b52a1;
+    
     border-radius: 20px;
     text-align: center;
     margin-left: 10%;
+    
     width: 80px;
     height: 20px;
  }
 
 ul li a#inicio:hover{
-    background-color: rgba(84, 38, 140, 0.699);
+    background-color: #6b52a1;
     color: rgb(0, 0, 0);
+    text-align: "center"
 
  }
  
