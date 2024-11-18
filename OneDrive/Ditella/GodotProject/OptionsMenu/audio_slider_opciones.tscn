@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkyyq0a1gvlg8"]
+
+[ext_resource type="Script" path="res://OptionsMenu/audio_slider_opciones.gd" id="1_3g8eu"]
+[ext_resource type="FontFile" uid="uid://dr1gutgbulnbv" path="res://Font/alagard.ttf" id="2_5074b"]
+
+[node name="Audio_Slider_Opciones" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3g8eu")
+bus_name = "Master"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 638.0
+offset_bottom = 45.0
+theme_override_constants/separation = 15
+
+[node name="Audio_Name_lbl" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_5074b")
+theme_override_font_sizes/font_size = 16
+text = "Master"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 32)
+layout_mode = 2
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.001
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Audio_Num_lbl" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_5074b")
+theme_override_font_sizes/font_size = 16
+text = "99.2"

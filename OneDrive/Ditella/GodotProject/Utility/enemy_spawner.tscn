@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba2claihwes2y"]
+
+[ext_resource type="Script" path="res://Utility/enemy_spawner.gd" id="1_pkvpv"]
+[ext_resource type="Script" path="res://Utility/spawn_info.gd" id="2_qrkxc"]
+[ext_resource type="PackedScene" uid="uid://gvm5jcbbgwdv" path="res://Enemy/guzano.tscn" id="3_ee0xu"]
+
+[sub_resource type="Resource" id="Resource_nkoal"]
+script = ExtResource("2_qrkxc")
+time_start = 0
+time_end = 10
+enemy = ExtResource("3_ee0xu")
+enemy_num = 10
+enemy_spawn_delay = 0
+
+[node name="EnemySpawner" type="Node2D"]
+script = ExtResource("1_pkvpv")
+spawns = Array[ExtResource("2_qrkxc")]([SubResource("Resource_nkoal")])
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

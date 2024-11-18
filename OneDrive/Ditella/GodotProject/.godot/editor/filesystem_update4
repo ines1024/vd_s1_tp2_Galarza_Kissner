@@ -1,0 +1,8 @@
+res://Utility/item_option.gd
+res://TitleScreen/botones_theme.tres
+res://World/world.tscn
+res://menu_pausa.gd
+res://Player/player.tscn
+res://TitleScreen/menu.tscn
+res://World/menu_pausa.tscn
+res://Utility/basic_button.tscn

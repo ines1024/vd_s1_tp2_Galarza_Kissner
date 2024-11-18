@@ -1,0 +1,140 @@
+[gd_scene load_steps=9 format=3 uid="uid://djtdb5ofjrh6j"]
+
+[ext_resource type="Script" path="res://TitleScreen/menu.gd" id="1_betbh"]
+[ext_resource type="Texture2D" uid="uid://bot06jhluxgjm" path="res://Textures/fondo_menu.png" id="2_frcwb"]
+[ext_resource type="FontFile" uid="uid://dr1gutgbulnbv" path="res://Font/alagard.ttf" id="3_ftyga"]
+[ext_resource type="Theme" uid="uid://sftdrowteh3g" path="res://TitleScreen/botones_theme.tres" id="4_2ok47"]
+[ext_resource type="AudioStream" uid="uid://bbufl4r1ou1rw" path="res://Audio/Music/battleThemeA.mp3" id="4_fpp83"]
+
+[sub_resource type="Shader" id="Shader_p0ddm"]
+code = "shader_type canvas_item;
+
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y5np1"]
+shader = SubResource("Shader_p0ddm")
+
+[sub_resource type="GDScript" id="GDScript_pkseb"]
+script/source = "extends Control
+
+
+func _on_jugar_pressed():
+	get_tree().change_scene_to_file(\"res://World/world.tscn\")
+
+func _on_opciones_pressed():
+	get_tree().change_scene_to_file(\"res://options_menu.tscn\")
+
+		
+
+func _on_salir_pressed():
+	get_tree().quit()
+"
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_betbh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_frcwb")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 55
+
+[node name="Separador" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_ftyga")
+theme_override_font_sizes/font_size = 54
+text = "Virtual Angel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 2
+
+[node name="Separador2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Jugar" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+material = SubResource("ShaderMaterial_y5np1")
+clip_contents = true
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+theme = ExtResource("4_2ok47")
+theme_type_variation = &"FlatButton"
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_ftyga")
+theme_override_font_sizes/font_size = 24
+text = "Jugar"
+script = SubResource("GDScript_pkseb")
+
+[node name="Opciones" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+material = SubResource("ShaderMaterial_y5np1")
+clip_contents = true
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+theme = ExtResource("4_2ok47")
+theme_type_variation = &"FlatButton"
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_ftyga")
+theme_override_font_sizes/font_size = 24
+text = "Opciones"
+script = SubResource("GDScript_pkseb")
+
+[node name="Salir" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+material = SubResource("ShaderMaterial_y5np1")
+clip_contents = true
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+theme = ExtResource("4_2ok47")
+theme_type_variation = &"FlatButton"
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_ftyga")
+theme_override_font_sizes/font_size = 24
+text = "Salir"
+script = SubResource("GDScript_pkseb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_fpp83")
+volume_db = -11.465
+autoplay = true
+bus = &"Musica"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Salir" to="." method="_on_salir_pressed"]

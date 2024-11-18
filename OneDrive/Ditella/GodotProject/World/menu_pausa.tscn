@@ -1,0 +1,130 @@
+[gd_scene load_steps=9 format=3 uid="uid://dedeksck2s8gu"]
+
+[ext_resource type="Script" path="res://menu_pausa.gd" id="1_u0nty"]
+[ext_resource type="FontFile" uid="uid://dr1gutgbulnbv" path="res://Font/alagard.ttf" id="2_ur0gx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fusou"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7mbu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjfdp"]
+bg_color = Color(0.384314, 0.188235, 0.568627, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ch1c"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egq5j"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="Theme" id="Theme_1o3jh"]
+Button/colors/font_hover_color = Color(0.760784, 0.619608, 0.937255, 0.682353)
+Button/font_sizes/font_size = 18
+Button/fonts/font = ExtResource("2_ur0gx")
+Button/styles/disabled = SubResource("StyleBoxFlat_fusou")
+Button/styles/focus = SubResource("StyleBoxFlat_d7mbu")
+Button/styles/hover = SubResource("StyleBoxFlat_xjfdp")
+Button/styles/normal = SubResource("StyleBoxFlat_3ch1c")
+Button/styles/pressed = SubResource("StyleBoxFlat_egq5j")
+
+[node name="MenuPausa" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u0nty")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 5.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.384314, 0.188235, 0.568627, 0.184314)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -92.0
+offset_top = 317.0
+offset_right = 106.0
+offset_bottom = 350.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_ur0gx")
+theme_override_font_sizes/normal_font_size = 15
+text = "		Juego en pausa
+Presione esc para cotinuar"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = -27.0
+offset_right = 54.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Continuar" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_1o3jh")
+theme_override_fonts/font = ExtResource("2_ur0gx")
+text = "   Continuar  "
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Reiniciar" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_1o3jh")
+theme_override_fonts/font = ExtResource("2_ur0gx")
+text = "    Reiniciar  "
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Salir" type="Button" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_1o3jh")
+theme_override_fonts/font = ExtResource("2_ur0gx")
+text = "       Salir      "
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer3/Salir" to="." method="_on_salir_pressed"]

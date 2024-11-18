@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmvc7l4ee6pnm"]
+
+[ext_resource type="Script" path="res://OptionsMenu/options_menu.gd" id="1_iydfa"]
+[ext_resource type="FontFile" uid="uid://dr1gutgbulnbv" path="res://Font/alagard.ttf" id="1_sghvw"]
+[ext_resource type="Texture2D" uid="uid://bot06jhluxgjm" path="res://Textures/fondo_menu.png" id="2_qo2il"]
+[ext_resource type="PackedScene" uid="uid://c4swj5cpemccr" path="res://OptionsMenu/ajustes_contenedor.tscn" id="3_3wb5o"]
+[ext_resource type="Theme" uid="uid://sftdrowteh3g" path="res://TitleScreen/botones_theme.tres" id="5_5eeco"]
+[ext_resource type="AudioStream" uid="uid://bbufl4r1ou1rw" path="res://Audio/Music/battleThemeA.mp3" id="5_h1afs"]
+
+[node name="Options_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iydfa")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qo2il")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_sghvw")
+theme_override_font_sizes/font_size = 32
+text = "Opciones"
+horizontal_alignment = 1
+
+[node name="Ajustes" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_3wb5o")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Atras" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("5_5eeco")
+theme_type_variation = &"FlatButton"
+theme_override_fonts/font = ExtResource("1_sghvw")
+text = "Atrás"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_h1afs")
+autoplay = true
+bus = &"Musica"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Atras" to="." method="_on_atras_pressed"]

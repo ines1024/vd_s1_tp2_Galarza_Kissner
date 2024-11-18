@@ -1,0 +1,147 @@
+[gd_scene load_steps=11 format=3 uid="uid://c4swj5cpemccr"]
+
+[ext_resource type="FontFile" uid="uid://dr1gutgbulnbv" path="res://Font/alagard.ttf" id="1_2h80o"]
+[ext_resource type="Texture2D" uid="uid://b05ewdyjn36tx" path="res://Textures/fondo_mas_pque.png" id="1_6www7"]
+[ext_resource type="PackedScene" uid="uid://dkyyq0a1gvlg8" path="res://OptionsMenu/audio_slider_opciones.tscn" id="1_fnum3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lso6v"]
+bg_color = Color(0.882353, 0.87451, 0.321569, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwqly"]
+bg_color = Color(0.866667, 0.815686, 0.964706, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72mfh"]
+bg_color = Color(0.866667, 0.815686, 0.964706, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_miqxc"]
+bg_color = Color(0.866667, 0.815686, 0.964706, 0)
+border_width_left = 25
+border_width_right = 25
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12w2y"]
+bg_color = Color(0.866667, 0.815686, 0.964706, 0)
+border_width_left = 25
+border_width_right = 25
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4ivk"]
+bg_color = Color(0.866667, 0.815686, 0.964706, 0)
+border_width_left = 25
+border_width_right = 25
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="Theme" id="Theme_7qux2"]
+TabContainer/constants/icon_separation = 4
+TabContainer/constants/side_margin = 8
+TabContainer/font_sizes/font_size = 20
+TabContainer/styles/panel = SubResource("StyleBoxFlat_lso6v")
+TabContainer/styles/tab_disabled = SubResource("StyleBoxFlat_qwqly")
+TabContainer/styles/tab_focus = SubResource("StyleBoxFlat_72mfh")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_miqxc")
+TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_12w2y")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_j4ivk")
+
+[node name="Ajustes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6www7")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = 30.0
+offset_right = -80.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_7qux2")
+theme_override_constants/outline_size = 2
+theme_override_constants/side_margin = 4
+theme_override_constants/icon_separation = 4
+theme_override_fonts/font = ExtResource("1_2h80o")
+theme_override_font_sizes/font_size = 28
+tab_alignment = 1
+current_tab = 0
+
+[node name="Sonido" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+max_tab_width = 10
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Sonido"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Sonido/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sonido/MarginContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Audio_Slider_Master" parent="TabContainer/Sonido/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_fnum3")]
+layout_mode = 2
+
+[node name="Audio_Slider_Musica" parent="TabContainer/Sonido/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_fnum3")]
+layout_mode = 2
+bus_name = "Musica"
+
+[node name="Audio_Slider_SFX" parent="TabContainer/Sonido/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_fnum3")]
+layout_mode = 2
+bus_name = "SFX"
+
+[node name="Controles" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+max_tab_width = 10
+metadata/_tab_index = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Controles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Controles/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="Label" type="Label" parent="TabContainer/Controles/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2h80o")
+text = "Prueba"
+
+[node name="Label2" type="Label" parent="TabContainer/Controles/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2h80o")
+text = "12345678"

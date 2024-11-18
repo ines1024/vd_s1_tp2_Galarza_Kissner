@@ -1,0 +1,14 @@
+MarginContainer
+Button
+HBoxContainer
+VBoxContainer
+CanvasLayer
+RichTextLabel
+Label
+ColorRect
+Node2D
+PanelContainer
+CenterContainer
+TextureRect
+CollisionShape2D
+StaticBody2D

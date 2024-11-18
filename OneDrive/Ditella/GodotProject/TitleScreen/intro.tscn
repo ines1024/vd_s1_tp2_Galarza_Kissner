@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cf1avqe36p7vm"]
+
+[ext_resource type="Script" path="res://World/intro.gd" id="1_bghqi"]
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_bghqi")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
