@@ -1,0 +1,298 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #111;
+  background-color: #fff;
+}
+
+/* ---------- HEADER ---------- */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 5%;
+  background-color: #250076;
+  color: #fff;
+}
+
+#nav-principal ul {
+  display: flex;
+  margin-left: 2%;
+  gap: 8%;
+  list-style: none;
+  white-space: nowrap;
+}
+
+#nav-principal a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+#header .acciones {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primario {
+  background-color: #fff;
+  color: #3600ab;
+  
+}
+
+.btn-secundario {
+  background-color: #fff;
+  color: #3600ab;
+  margin-bottom: 5%;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+/* ---------- MAIN GENERAL ---------- */
+main {
+  background-color: #3600ab;
+  color: white;
+  padding: 5% 8%;
+}
+
+/* ---------- TEXTOS ---------- */
+h1, h2 {
+  font-family: "Rubik Spray Paint", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 0.97;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 5rem;
+  color: #3600ab;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+/* ---------- PORTADA ---------- */
+#portada {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  background-color: #3600ab;
+}
+
+#portada .texto {
+  flex: 1;
+}
+
+#portada .imagenes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+#portada img {
+  max-width: 70%;
+  border-radius: 2%;
+}
+
+/* ---------- QUIENES SOMOS ---------- */
+article {
+  background-color: white;
+  padding: 5% ;
+  color: #3600ab;
+  border-radius: 2%;
+  text-align: center;
+  
+}
+
+article h2 {
+  color: #3600ab;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+article p {
+  color: #3600ab;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+article .btn-secundario {
+  margin-bottom: 0;
+}
+
+article .acciones {
+  margin-top: 1.5rem;
+  
+}
+
+#fotoBateria {
+  text-align: center;
+  padding: 4% 0;
+  background-color: white;
+}
+
+#fotoBateria img {
+  max-width: 100%;
+  border-radius: 2%;
+}
+
+/* ---------- PÁGINA CINE ---------- */
+#cine-teatro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  padding: 5% 8%;
+  background-color: #3600ab;
+  color: white;
+}
+
+.tapa {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tapa h1 {
+  color: #B4314E;
+}
+
+.tapa p {
+  color: white;
+  margin: 0;
+  max-width: 700px;
+}
+
+.imgcine {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imgcine img {
+  max-width: 90%;
+  border-radius: 10px;
+}
+
+/* ---------- AGENDA ---------- */
+.agenda {
+  background-color: #3600ab;
+  color: white;
+  text-align: center;
+  padding: 5% 8%;
+}
+
+.agenda h1 {
+  font-size: 3rem;
+  color: #B4314E;
+  margin-bottom: 1.5rem;
+}
+
+.agenda p {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+.calendario {
+  background-color: white;
+  color: black;
+  width: 80%;
+  border: 3px solid #3600ab;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.agenda table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+}
+
+.agenda th, .agenda td {
+  padding: 10px;
+  border: 1px solid #3600ab;
+}
+
+/* ---------- FOOTER ---------- */
+#footer {
+  background-color: #250076;
+  color: #fff;
+  padding: 5% 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.footer-top,
+.footer-bottom,
+.footer-copy {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+
+
+.footer-bottom ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-bottom a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-copy {
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy .links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-button {
+  padding: 5px;
+}
